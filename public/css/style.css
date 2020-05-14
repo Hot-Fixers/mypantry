@@ -1,6 +1,20 @@
-.png
+.png, .addbutton, .explorebutton, .addmanually
 {
 display: block;
 margin-left: auto;
 margin-right: auto;
 }
+.addbutton, .explorebutton
+{
+width: 200px;
+ }
+
+.explorebutton
+{
+background-color: #f9a590;
+} 
+
+.addmanually, .addbutton
+{
+background-color: #8ae6fe;
+} 
