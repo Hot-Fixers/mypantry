@@ -27,7 +27,6 @@ module.exports = function(app) {
 
   // POST route for saving a new Ingredients
   app.post("/api/ingredients", function(req, res) {
-    console.log(`req: ${req.body}\n`);
     db.Ingredients.create(req.body).then(function(dbIngredients) {
       res.json(dbIngredients);
     });
