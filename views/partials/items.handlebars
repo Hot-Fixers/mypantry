@@ -1,0 +1,15 @@
+{{#each items}}
+    <div class="control field-is-horizontal">
+        <button class="button is-medium dec-btn" item={{Ingredients}}>
+            <i class="icon fas fa-minus-circle"></i>
+        </button>
+        <input class="input text" value={{Ingredients}} readonly="true">
+        <input class="input amount" value={{Amount}} item={{Ingredients}} el="quant">
+        <button class="button is-medium inc-btn" item={{Ingredients}}>
+            <span><i class="icon fas fa-plus-circle"></i></span>
+        </button>
+        <button class="button is-medium confirm-btn" item={{Ingredients}} itemId={{id}} el="con">
+            <i class="icon fas fa-save"></i>
+        </button>
+    </div>
+{{/each}}
