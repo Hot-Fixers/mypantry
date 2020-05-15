@@ -19,7 +19,7 @@ background-color: #f9a590;
 background-color: #8ae6fe;
 } 
 
-.fa-3x
+.fa-3x, .fa-home
 {
     color: rgb(206, 100, 100);
 }
@@ -32,6 +32,9 @@ height: 50px;
 .text
 {
   width: 150px;
+  margin-left: 10px; 
+  margin-right: 10px;
+
 }
 
 .amount
@@ -39,9 +42,17 @@ height: 50px;
     margin-right: 12px;
 }
 
-.text
+.fa-home
 {
-  margin-left: 10px; 
-  margin-right: 10px;
+  margin: 5px;
 }
 
+.section
+{
+  padding-top: 0px;
+}
+
+.home
+{
+margin: 15px;
+}
