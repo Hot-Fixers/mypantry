@@ -2,6 +2,7 @@
 // Requiring npm packages
 var express = require("express");
 var session = require("express-session");
+const exphbs = require("express-handlebars")
 
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
@@ -20,9 +21,17 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
+/////////////
+// Set Handlebars as the default templating engine.
+app.engine("handlebars", exphbs({ defaultLayout: "main" }))
+app.set("view engine", "handlebars");
+
+/////////////
+
 // Requiring our routes
 require("./routes/html-routes.js")(app);
 require("./routes/api-routes.js")(app);
+require("./routes/ingredients-routes")(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync().then(function() {
