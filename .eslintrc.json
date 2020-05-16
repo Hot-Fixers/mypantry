@@ -21,11 +21,10 @@
       "camelcase": "error",
       "indent": ["error", 2],
       "semi": ["error", "always"]
+
     },
     "parserOptions": {
       "ecmaVersion": 2018
     }
-  
-
-
 }
+
