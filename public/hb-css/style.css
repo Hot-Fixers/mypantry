@@ -19,7 +19,12 @@ background-color: #f9a590;
 background-color: #8ae6fe;
 } 
 
-.fa-3x, .fa-home
+.fa-plus-circle
+{
+    color: rgb(206, 100, 100);
+}
+
+.fa-minus-circle
 {
     color: rgb(206, 100, 100);
 }
@@ -32,9 +37,6 @@ height: 50px;
 .text
 {
   width: 150px;
-  margin-left: 10px; 
-  margin-right: 10px;
-
 }
 
 .amount
@@ -42,17 +44,16 @@ height: 50px;
     margin-right: 12px;
 }
 
-.fa-home
+.text
 {
-  margin: 5px;
+  margin-left: 10px; 
+  margin-right: 10px;
 }
 
-.section
-{
-  padding-top: 0px;
+.confirm-btn {
+  display: none;
 }
 
-.home
-{
-margin: 15px;
+.fa-save {
+  color: #3d51c2
 }
