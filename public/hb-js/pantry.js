@@ -42,7 +42,10 @@ $(document).ready(function() {
         else {
             $.ajax("api/ingredients", {
                 type: "PUT",
-                data: {IngId: iId}
+                data: {
+                    IngId: iId,
+                    Amount: $(`[item=${$(this).attr("item")}][el=quant]`).val()
+                }
             }).then(() => {
                 location.reload();
             });
@@ -59,7 +62,8 @@ $(document).ready(function() {
             type: "POST",
             data: {
                 Ingredients: $("[el=iName]").val().trim(),
-                Amount: $("[el=iAmount]").val().trim()
+                Amount: $("[el=iAmount]").val().trim(),
+                UserId: $(this).attr("userid")
             }
         }).then(() => {
             location.reload();
