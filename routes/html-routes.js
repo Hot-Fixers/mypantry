@@ -1,7 +1,7 @@
 // Requiring path to so we can use relative routes to our HTML files
 var path = require("path");
 var db = require("../models");
-const axios = require("axios");
+let axios = require("axios");
 require("dotenv").config();
 
 // Requiring our custom middleware for checking if a user is logged in
@@ -59,7 +59,7 @@ module.exports = function (app) {
 
   app.get("/explore", isAuthenticated, async function (req, res) {
     try {
-      const key = process.env.KEY
+      let key = process.env.KEY
       let query = {};
       if (req.query.User_id) {
         query.UserId = req.query.User_id;
