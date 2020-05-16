@@ -1,0 +1,12 @@
+<ul>
+    {{#each recipes}}
+    <li>
+        Name: {{title}}
+        <img src={{image}}>
+        {{#each steps}}
+        step: {{number}}
+        {{step}}
+        {{/each}}
+    </li>
+    {{/each}}
+</ul>
