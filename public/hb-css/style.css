@@ -57,3 +57,11 @@ height: 50px;
 .fa-save {
   color: #3d51c2
 }
+.card {
+  width: 312px;
+  margin-bottom: 30px;
+  background-color: #ebfbff;
+}
+.card-footer {
+  background-color: #fde8e3;
+}
