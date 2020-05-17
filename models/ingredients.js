@@ -1,8 +1,8 @@
 
 // Creating our Ingredients model
 module.exports = function(sequelize, DataTypes) {
-  var Ingredients = sequelize.define("Ingredients", {
-    // The Ingredients cannot be null, and must be a proper email before creation
+  const Ingredients = sequelize.define("Ingredients", {
+    // The Ingredients cannot be null
     Ingredients: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -10,6 +10,7 @@ module.exports = function(sequelize, DataTypes) {
     Amount:{
       type: DataTypes.INTEGER,
       allowNull: false,
+      defaultValue: 1
     }
   });
 
