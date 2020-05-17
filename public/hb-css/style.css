@@ -5,7 +5,9 @@
   margin-left: auto;
   margin-right: auto;
 }
-body, html{
+
+body,
+html {
   height: 100%;
 }
 
@@ -13,11 +15,11 @@ body, html{
 .explore-btn {
   width: 40%;
   font-family: 'Kodchasan', sans-serif;
-  font-size: 2.2rem !important;
+  font-size: 2vw !important;
 }
 
-
-.explore-ctn, .stock-ctn{
+.explore-ctn,
+.stock-ctn {
   padding: 20px;
 }
 
@@ -70,9 +72,14 @@ body {
   background-image: url(../assets/plaid.jpg), url(../assets/plaid.jpg);
   background-repeat: repeat-y;
   background-color: rgb(227, 240, 245);
-  background-position: right, left, center;
+  background-position: right, left;
 }
 
+
+.btn-text {
+  font-size: 100% !important;
+  font-size: 5vw;
+}
 
 .is-size-2 {
   margin-bottom: 20px;
@@ -92,3 +99,28 @@ body {
 
 }
 
+/* mobile devices */
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-image: url(../assets/plaid.jpg), url(../assets/plaid.jpg);
+    background-repeat: repeat-x;
+    background-color: rgb(227, 240, 245);
+    background-position: top, bottom;
+
+  }
+  .stock-btn,
+  .explore-btn {
+    width: 70%;
+    height: 5rem;
+    font-size: 4vw !important;
+  }
+  .logo{
+    margin-top: 110px !important;
+  }
+
+
+
+
+
+}
