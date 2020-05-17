@@ -1,35 +1,29 @@
-<ul>
-    {{#each recipes}}
-    <li>
-        <ul>
-            <li>
-               {{title}} 
-            </li>
-            <li>
+{{>logo}}
+<div class="section">
+    <div class="columns">
+        <div class="column">
 
-            </li> 
-            <img src={{image}}>
-            {{#each steps}}
-                {{>step}}
-            {{/each}}
-        </ul>
-    </li>
-    {{/each}}
-</ul>
-
-<ul>
-    {{#each recipes}}
-    <li>
-        <div class="card">
-            <div class="card-image">
-                <img src={{image}}>
-            </div>
-            <div class="card-content">
-                <h4>{{title}}</h4>
-            </div>
-            <footer class="card-footer">
-                
-            </footer>
         </div>
-    </li>
-</ul>
+        <div class="column">
+            <ul>
+                {{#each recipes}}
+                <li>
+                    {{>steps}}
+                    <div class="card">
+                        <div class="card-image">
+                            <img src={{image}}>
+                        </div>
+                        <div class="card-content">
+                            <h4>{{title}}</h4>
+                        </div>
+                        <footer class="card-footer">
+                            <a class="card-footer-item" rId={{id}}>Show Instructions</a>
+                        </footer>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+

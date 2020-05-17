@@ -1,4 +1,18 @@
 $(document).ready(function() {
+    // MAIN MENU ****************************************
+    $(".stock-btn").on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        window.location.replace("/add");
+    });
+
+    $(".explore-btn").on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        window.location.replace("/explore");
+    });
 
     // UPDATE EXISTING ITEMS IN PANTRY ***************************************
 
@@ -54,6 +68,13 @@ $(document).ready(function() {
 
     // ADD NEW ITEMS TO PANTRY *******************************************
 
+    $(".i-input").on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        $(".add-btn").show();
+    });
+
     $(".add-btn").on("click", function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -70,4 +91,21 @@ $(document).ready(function() {
         });
     });
 
+    // RECIPES ****************************************
+
+    // On click show recipe instructions modal
+    $(".card-footer-item").on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        $(`[rId=${$(this).attr("rId")}]`).addClass("is-active");
+    });
+
+    // Close modal
+    $(".modal-close").on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        $(".modal").removeClass("is-active");
+    });
 });

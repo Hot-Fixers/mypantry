@@ -1,11 +1,13 @@
 
-<div class="modal is-clipped">
+<div class="modal is-clipped" rId={{id}}>
   <div class="modal-background"></div>
   <div class="modal-content">
       <ol>
+          {{#each steps}}
           <li>
-              {{step}}
+              <p>{{step}}</p>
           </li>
+          {{/each}}
       </ol>
   </div>
   <button class="modal-close is-large" aria-label="close"></button>
