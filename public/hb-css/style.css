@@ -14,6 +14,9 @@ height: 100%;
 .card{
   margin: 10px;
 }
+.cards{
+text-align: center;
+}
 
 .cards-clm{
   margin-left: 140px;
@@ -105,7 +108,33 @@ body {
 .card {
   width: 312px;
   margin-bottom: 40px;
+}
 
+.new-item, .edit-item{
+    border: 1px solid;
+    border-color: wheat;
+    padding: 10px;
+    box-shadow: 5px 10px 8px #888888;
+    background-color: white;
+    border-radius: 25px;
+    margin: 8px;
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.control{
+  justify-content: center;
+  text-align: center;
+}
+
+.new-item{
+  height: 200px !important;
+}
+
+.add-head{
+  margin-top: 7px;
+  font-family: 'Kodchasan', sans-serif;
 }
 
 /* mobile devices */

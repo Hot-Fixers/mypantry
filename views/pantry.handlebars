@@ -3,13 +3,15 @@
     <div class="columns">
         <div class="column">
             <div class="columns is-centered">
-                <div class="column is-4-desktop is-6-tablet">
-                    <h2 class="is-size-2">Add a New Item</h2>
+                <div class=" new-item column is-4-desktop is-6-tablet">
+                    <h2 class="add-head is-size-2">Add a New Item</h2>
                     {{>addItem}}
                 </div>
-                <div class="column is-4-desktop is-6-tablet">
-                    <h2 class="is-size-2">Items in Your Pantry</h2>
+                <div class="edit-item column is-4-desktop is-6-tablet">
+                    <h2 class="add-head is-size-2">Items in Your Pantry</h2>
+                    <div class="items">
                     {{>items}}
+                    </div>
                 </div>
             </div>
         </div>
