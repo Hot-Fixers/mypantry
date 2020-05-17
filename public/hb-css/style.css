@@ -8,7 +8,16 @@
 
 body,
 html {
-  height: 100%;
+
+
+}
+.card{
+  margin: 10px;
+}
+
+.cards-clm{
+  margin-left: 140px;
+  margin-right: 140px;
 }
 
 .stock-btn,
