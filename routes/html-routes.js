@@ -68,7 +68,7 @@ module.exports = function (app) {
         where: query
       });
       const iMapped = ingredients.map(i => i = i.Ingredients).join(",+");
-      const dishes = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${iMapped}&number=2&ranking=2&apiKey=${key}&sort=random`);
+      const dishes = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${iMapped}&number=2&ranking=2&apiKey=${key}`);
       const dMapped = dishes.data.map(d => d = d.id);
       const steps = [];
       for (let d of dMapped) {
