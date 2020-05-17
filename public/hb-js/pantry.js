@@ -14,6 +14,13 @@ $(document).ready(function() {
         window.location.replace("/explore");
     });
 
+    $(".back-btn").on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        window.location.replace("/members");
+    });
+
     // UPDATE EXISTING ITEMS IN PANTRY ***************************************
 
     // On click decrements the item amount by 1, to a minimum of 0.
