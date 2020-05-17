@@ -99,6 +99,15 @@ body {
 
 }
 
+.back-btn {
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
+}
+
 /* mobile devices */
 
 @media only screen and (max-width: 600px) {
@@ -118,9 +127,4 @@ body {
   .logo{
     margin-top: 110px !important;
   }
-
-
-
-
-
 }
