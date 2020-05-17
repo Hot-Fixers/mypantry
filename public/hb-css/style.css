@@ -1,56 +1,64 @@
-.png, .stock-btn, .explore-btn
-{
-display: block;
-margin-left: auto;
-margin-right: auto;
+.png,
+.stock-btn,
+.explore-btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-.stock-btn, .explore-btn
-{
-width: 200px;
- }
-
-.explore-btn
-{
-background-color: #f9a590;
-} 
-
-.stock-btn
-{
-background-color: #8ae6fe;
-} 
-
-.fa-plus-circle
-{
-    color: rgb(206, 100, 100);
+body, html{
+  height: 100%;
 }
 
-.fa-minus-circle
-{
-    color: rgb(206, 100, 100);
+.stock-btn,
+.explore-btn {
+  width: 40%;
+  font-family: 'Kodchasan', sans-serif;
+  font-size: 2.2rem !important;
 }
 
-.amount, .text
-{
-height: 50px;
+
+.explore-ctn, .stock-ctn{
+  padding: 20px;
 }
 
-.text
-{
+.explore-btn {
+  background-color: #f9a590;
+
+}
+
+.stock-btn {
+  background-color: #8ae6fe;
+}
+
+.fa-plus-circle {
+  color: rgb(206, 100, 100);
+}
+
+.fa-minus-circle {
+  color: rgb(206, 100, 100);
+}
+
+.amount,
+.text {
+  height: 50px;
+}
+
+.text {
   width: 150px;
 }
 
-.amount
-{width: 50px;
-    margin-right: 10px;
+.amount {
+  width: 50px;
+  margin-right: 10px;
 }
 
-.text
-{
-  margin-left: 10px; 
+.text {
+  margin-left: 10px;
   margin-right: 2px;
 }
 
-.confirm-btn, .add-btn {
+.confirm-btn,
+.add-btn {
   display: none;
 }
 
@@ -59,10 +67,12 @@ height: 50px;
 }
 
 body {
-  background-image: url(../assets/plaid.jpg);
+  background-image: url(../assets/plaid.jpg), url(../assets/plaid.jpg);
   background-repeat: repeat-y;
-  background-color: rgb(227, 240, 245)
+  background-color: rgb(227, 240, 245);
+  background-position: right, left, center;
 }
+
 
 .is-size-2 {
   margin-bottom: 20px;
@@ -81,3 +91,4 @@ body {
   margin-bottom: 40px;
 
 }
+
