@@ -2,9 +2,13 @@
 <div class="section">
     <div class="columns">
         <div class="column">
+
+        </div>
+        <div class="column">
             <ul>
                 {{#each recipes}}
                 <li>
+                    {{>steps}}
                     <div class="card">
                         <div class="card-image">
                             <img src={{image}}>
@@ -13,33 +17,14 @@
                             <h4>{{title}}</h4>
                         </div>
                         <footer class="card-footer">
-                            <a class="card-footer-item">Show Steps</a>
+                            <a class="card-footer-item" rId={{id}}>Show Instructions</a>
                         </footer>
                     </div>
                 </li>
                 {{/each}}
             </ul>
         </div>
-        <div class="column">
-
-        </div>
     </div>
 </div>
 
-{{!-- <ul>
-    {{#each recipes}}
-    <li>
-        <div class="card">
-            <div class="card-image">
-                <img src={{image}}>
-            </div>
-            <div class="card-content">
-                <h4>{{title}}</h4>
-            </div>
-            <footer class="card-footer">
-                <a class="card-footer-item">Show Steps</a>
-            </footer>
-        </div>
-    </li>
-    {{/each}}
-</ul> --}}
+
