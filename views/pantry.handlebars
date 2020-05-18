@@ -1,20 +1,24 @@
+<style>
+    .columns {
+        justify-content: center;
+    }
+</style>
+
 <button class="button back-btn">
-    <i class="far fa-arrow-alt-circle-left is-small icon"></i>
+    <i class="far fa-arrow-alt-circle-left is-large icon"></i>
 </button>
 {{>logo}}
 <div class="section">
-    <div class="columns">
-        <div class="column">
-            <div class="columns is-centered">
-                <div class=" new-item column is-4-desktop is-6-tablet">
-                    <h2 class="add-head is-size-2">Add a New Item</h2>
-                    {{>addItem}}
-                </div>
-                <div class="edit-item column is-4-desktop is-6-tablet">
-                    <h2 class="add-head is-size-2">Items in Your Pantry</h2>
-                    <div class="items">
+    <div class="column clm-main-add">
+        <div class="columns">
+            <div class=" new-item column is-4-desktop is-4-tablet is-4-mobile">
+                <h2 class="add-head is-size-2">Add a New Item</h2>
+                {{>addItem}}
+            </div>
+            <div class="edit-item column is-4-desktop is-4-tablet is-4-mobile">
+                <h2 class="add-head is-size-2">Items in Your Pantry</h2>
+                <div class="items";">
                     {{>items}}
-                    </div>
                 </div>
             </div>
         </div>

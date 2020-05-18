@@ -8,17 +8,19 @@
 
 body,
 html {
-overflow: auto;
-height: 100%;
-}
-.card{
-  margin: 10px;
-}
-.cards{
-text-align: center;
+  overflow: auto;
+  height: 100%;
 }
 
-.cards-clm{
+.card {
+  margin: 10px;
+}
+
+.cards {
+  text-align: center;
+}
+
+.cards-clm {
   margin-left: 140px;
   margin-right: 140px;
 }
@@ -110,59 +112,97 @@ body {
   margin-bottom: 40px;
 }
 
-.new-item, .edit-item{
-    border: 1px solid;
-    border-color: wheat;
-    padding: 10px;
-    box-shadow: 5px 10px 8px #888888;
-    background-color: white;
-    border-radius: 25px;
-    margin: 8px;
-    text-align: center;
-    justify-content: center;
-    padding: 20px;
+.new-item,
+.edit-item {
+  border: 1px solid;
+  border-color: wheat;
+  padding: 10px;
+  box-shadow: 5px 10px 8px #888888;
+  background-color: white;
+  border-radius: 25px;
+  margin: 8px;
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: auto;
+  min-height: 300px;
+  height: 100% !important;
+
 }
 
-.control{
+.control {
   justify-content: center;
   text-align: center;
 }
 
-.new-item{
-  height: 200px !important;
+.new-item {
+  height: 200px ;
 }
 
-.add-head{
+.add-head {
   margin-top: 7px;
   font-family: 'Kodchasan', sans-serif;
 }
 
 .back-btn {
   background-color: Transparent;
-  background-repeat:no-repeat;
+  background-repeat: no-repeat;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
   overflow: hidden;
-  outline:none;
+  outline: none;
+  margin-top: 50px;
+  margin-left: 200px;
+  height: 50px;
+}
+.itm{
+  margin: 10px;
 }
 
 /* mobile devices */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   body {
-    background-image: url(../assets/plaid.jpg), url(../assets/plaid.jpg);
-    background-repeat: repeat-x;
-    background-color: rgb(227, 240, 245);
-    background-position: top, bottom;
+    background-size: 2rem;
 
   }
+
+  .column.is-4-mobile {
+    width: 70%;
+}
+
   .stock-btn,
   .explore-btn {
     width: 70%;
     height: 5rem;
     font-size: 4vw !important;
   }
-  .logo{
-    margin-top: 110px !important;
+
+  .logo {
+    margin-top: 5px !important;
+  }
+
+  .clm-main-add {
+    margin: auto;
+  }
+
+  .new-item,
+  .edit-item {
+    margin: auto;
+    margin-bottom: 20px;
+    min-width: 100px !important;
+    
+  }
+  .input{
+    margin: 0
+  }
+
+  .column.is-4-mobile{
+    width: 93%;
+  }
+
+  .back-btn {
+    margin-left: 50px;
+    display: flex;
   }
 }
