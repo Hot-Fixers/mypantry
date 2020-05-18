@@ -74,7 +74,7 @@ module.exports = function (app) {
       for (let d of dMapped) {
         let s = await axios.get(`https://api.spoonacular.com/recipes/${d}/analyzedInstructions?apiKey=${key}`);
         if (s.data.length === 0) {
-          steps.push({steps: ["Sorry, no instructions available."]})
+          steps.push({steps: ["Sorry, no instructions available."]});
         } else {
           steps.push({
             steps: s.data[0].steps
