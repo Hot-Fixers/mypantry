@@ -50,7 +50,10 @@ module.exports = function (app) {
       const ingredients = await db.Ingredients.findAll({
         where: query
       });
-      res.render("pantry", {items: ingredients.map(i => i.dataValues)});
+      res.render("pantry", {
+        items: ingredients.map(i => i.dataValues),
+        uId: req.user.id
+      });
     }
     catch (err) {
       throw err;
