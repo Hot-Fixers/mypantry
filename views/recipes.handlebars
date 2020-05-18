@@ -2,6 +2,9 @@
     <i class="far fa-arrow-alt-circle-left is-large icon"></i>
 </button>
 {{>logo}}
+{{#unless recipes}}
+    {{>noItems}}
+{{/unless}}
 <div class="section">
     <div class="columns">
         <div class="column cards-clm">

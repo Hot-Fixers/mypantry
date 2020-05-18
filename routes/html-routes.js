@@ -43,12 +43,10 @@ module.exports = function (app) {
 
   app.get("/add", isAuthenticated, async function (req, res) {
     try {
-      let query = {};
-      if (req.query.User_id) {
-        query.UserId = req.query.User_id;
-      }
       const ingredients = await db.Ingredients.findAll({
-        where: query
+        where: {
+          UserId: req.user.id
+        }
       });
       res.render("pantry", {
         items: ingredients.map(i => i.dataValues),
@@ -62,12 +60,10 @@ module.exports = function (app) {
   app.get("/explore", isAuthenticated, async function (req, res) {
     try {
       const key = process.env.KEY;
-      let query = {};
-      if (req.query.User_id) {
-        query.UserId = req.query.User_id;
-      }
       const ingredients = await db.Ingredients.findAll({
-        where: query
+        where: {
+          UserId: req.user.idid
+        }
       });
       const iMapped = ingredients.map(i => i = i.Ingredients);
       const iShuffled = _.shuffle(iMapped);
