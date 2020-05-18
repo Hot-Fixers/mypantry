@@ -73,6 +73,13 @@ $(document).ready(function() {
         };
     });
 
+    $("[el=quant]").on("click", function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        $(`[item=${$(this).attr("item")}][el=con]`).show();
+    })
+
     // ADD NEW ITEMS TO PANTRY *******************************************
 
     $(".i-input").on("click", function(e) {
