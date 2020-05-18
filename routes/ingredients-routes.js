@@ -12,19 +12,6 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
-  // GET route for getting all of the Ingredients
-  app.get("/api/ingredients", function(req, res) {
-    var query = {};
-    if (req.query.User_id) {
-      query.UserId = req.query.User_id;
-    }
-    db.Ingredients.findAll({
-      where: query
-    }).then(function(dbIngredients) {
-      res.json(dbIngredients);
-    });
-  });
-
   // POST route for saving a new Ingredients
   app.post("/api/ingredients", function(req, res) {
     db.Ingredients.create(req.body).then(function(dbIngredients) {
