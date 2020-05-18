@@ -62,7 +62,7 @@ module.exports = function (app) {
       const key = process.env.KEY;
       const ingredients = await db.Ingredients.findAll({
         where: {
-          UserId: req.user.idid
+          UserId: req.user.id
         }
       });
       const iMapped = ingredients.map(i => i = i.Ingredients);
