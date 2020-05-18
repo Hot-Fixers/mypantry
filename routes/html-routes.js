@@ -65,7 +65,7 @@ module.exports = function (app) {
           UserId: req.user.id
         }
       });
-      const iMapped = ingredients.map(i => i = i.Ingredients);
+      const iMapped = ingredients.map(i => i = i.dataValues).map(i => i.Ingredients);
       const iShuffled = _.shuffle(iMapped);
       const iFinal = iShuffled.slice(0, 6).join(",+");
       const dishes = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${iFinal}&number=10&apiKey=${key}`);
@@ -73,9 +73,13 @@ module.exports = function (app) {
       const steps = [];
       for (let d of dMapped) {
         let s = await axios.get(`https://api.spoonacular.com/recipes/${d}/analyzedInstructions?apiKey=${key}`);
-        steps.push({
-          steps: s.data[0].steps
-        });
+        if (s.data === []) {
+          delete s;
+        } else {
+          steps.push({
+            steps: s.data[0].steps
+          });
+        }
       }
       const combined = [];
       for (let i = 0; i < dMapped.length; i++) {
