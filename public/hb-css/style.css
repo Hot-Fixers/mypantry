@@ -28,7 +28,7 @@ html {
 .stock-btn,
 .explore-btn {
   width: 40%;
-  font-family: 'Kodchasan', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 2vw !important;
 }
 
@@ -121,27 +121,30 @@ body {
   background-color: white;
   border-radius: 25px;
   margin: 8px;
-  text-align: center;
+  /* text-align: center; */
   justify-content: center;
   padding: 20px;
   overflow: auto;
   min-height: 300px;
   height: 100% !important;
-
+}
+.edit-item{
+  min-width: 400px;
 }
 
 .control {
-  justify-content: center;
+  /* justify-content: center; */
   text-align: center;
 }
 
 .new-item {
   height: 200px ;
+  max-width: 300px
 }
 
 .add-head {
   margin-top: 7px;
-  font-family: 'Kodchasan', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 .back-btn {
@@ -158,7 +161,14 @@ body {
 .itm{
   margin: 10px;
 }
+.card{
+  min-height: 382px;
+}
 
+.modal-content {
+  text-align: left;
+  padding: 40px;
+}
 /* mobile devices */
 
 @media only screen and (max-width: 768px) {
@@ -205,4 +215,25 @@ body {
     margin-left: 50px;
     display: flex;
   }
+}
+
+
+/* Add page breakpoint  */
+@media only screen and (max-width: 1044px) {
+  .columns:not(.is-desktop) {
+    display: block;
+}
+.new-item, .edit-item{
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.column.is-4-mobile{
+  width: 70%;
+}
+.edit-item{
+  max-width: 500px;
+}
+
+
 }
