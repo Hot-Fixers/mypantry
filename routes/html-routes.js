@@ -2,6 +2,7 @@
 const path = require("path");
 const db = require("../models");
 const axios = require("axios");
+const _ = require("underscore");
 require("dotenv").config();
 
 // Requiring our custom middleware for checking if a user is logged in
@@ -68,8 +69,10 @@ module.exports = function (app) {
       const ingredients = await db.Ingredients.findAll({
         where: query
       });
-      const iMapped = ingredients.map(i => i = i.Ingredients).join(",+");
-      const dishes = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${iMapped}&number=2&ranking=2&apiKey=${key}`);
+      const iMapped = ingredients.map(i => i = i.Ingredients);
+      const iShuffled = _.shuffle(iMapped);
+      const iFinal = iShuffled.slice(0, 6).join(",+");
+      const dishes = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${iFinal}&number=10&apiKey=${key}`);
       const dMapped = dishes.data.map(d => d = d.id);
       const steps = [];
       for (let d of dMapped) {
