@@ -70,8 +70,8 @@ module.exports = function (app) {
         where: query
       });
       const iMapped = ingredients.map(i => i = i.Ingredients);
-      const iShuffled = _.shuffle(iMapped)
-      const iFinal = iShuffled.slice(0, 6).join(",+")
+      const iShuffled = _.shuffle(iMapped);
+      const iFinal = iShuffled.slice(0, 6).join(",+");
       const dishes = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${iFinal}&number=10&apiKey=${key}`);
       const dMapped = dishes.data.map(d => d = d.id);
       const steps = [];
