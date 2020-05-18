@@ -37,7 +37,6 @@ module.exports = function (app) {
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function (req, res) {
-    //res.sendFile(path.join(__dirname, "../public/members.html"));
     res.render("index");
   });
 
@@ -52,10 +51,9 @@ module.exports = function (app) {
       });
       res.render("pantry", {
         items: ingredients.map(i => i.dataValues),
-        uId: req.user.id
+        uId: req.user.id
       });
-    }
-    catch (err) {
+    } catch (err) {
       throw err;
     }
   });
@@ -76,16 +74,22 @@ module.exports = function (app) {
       const steps = [];
       for (let d of dMapped) {
         let s = await axios.get(`https://api.spoonacular.com/recipes/${d}/analyzedInstructions?apiKey=${key}`);
-        steps.push({steps: s.data[0].steps});
+        steps.push({
+          steps: s.data[0].steps
+        });
       }
-      const combined =[];
+      const combined = [];
       for (let i = 0; i < dMapped.length; i++) {
-        let c = {...dishes.data[i], ...steps[i]};
+        let c = {
+          ...dishes.data[i],
+          ...steps[i]
+        };
         combined.push(c);
       }
-      res.render("recipes", {recipes: combined});
-    }
-    catch (err) {
+      res.render("recipes", {
+        recipes: combined
+      });
+    } catch (err) {
       throw err;
     }
   });
