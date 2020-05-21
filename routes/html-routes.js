@@ -68,9 +68,9 @@ module.exports = function (app) {
       const iMapped = ingredients.map(i => i = i.dataValues).map(i => i.Ingredients);
       const iShuffled = _.shuffle(iMapped);
       const iFinal = iShuffled.slice(0, 6).join(",+");
-      console.log("before dishes")
+      console.log("before dishes");
       const dishes = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${iFinal}&number=10&apiKey=${key}`);
-      console.log(dishes)
+      console.log(dishes);
       const dMapped = dishes.data.map(d => d = d.id);
       const steps = [];
       for (let d of dMapped) {
