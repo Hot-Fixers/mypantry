@@ -68,14 +68,19 @@ module.exports = function (app) {
       const iMapped = ingredients.map(i => i = i.dataValues).map(i => i.Ingredients);
       const iShuffled = _.shuffle(iMapped);
       const iFinal = iShuffled.slice(0, 6).join(",+");
+      console.log("before dishes")
       const dishes = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?ingredients=${iFinal}&number=10&apiKey=${key}`);
+      console.log(dishes)
       const dMapped = dishes.data.map(d => d = d.id);
       const steps = [];
       for (let d of dMapped) {
+        console.log('inside4')
         let s = await axios.get(`https://api.spoonacular.com/recipes/${d}/analyzedInstructions?apiKey=${key}`);
         if (s.data.length === 0) {
+          console.log('insideIf')
           steps.push({steps: ["Sorry, no instructions available."]});
         } else {
+          console.log('insideElse')
           steps.push({
             steps: s.data[0].steps
           });
@@ -93,6 +98,8 @@ module.exports = function (app) {
         recipes: combined
       });
     } catch (err) {
+      console.log(err)
+      res.end(err);
       throw err;
     }
   });
