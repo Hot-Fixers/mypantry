@@ -13,6 +13,8 @@ Our biggest challenges on this project were working with Lint and Travis to get 
 * Integrate with delivery partners to help order groceries directrly from app.
 * Create a CMS to manage users.
 
+## Tech 
+ API for recipes: Spoonacular; Sequelize, MySQL, Passport, Bulma, Express, Express Handlebars, ESLint, Travis.
 
 ## Deployed URL
 https://shielded-harbor-38774.herokuapp.com/
